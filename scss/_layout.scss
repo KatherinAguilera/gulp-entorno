@@ -1,0 +1,94 @@
+/*Este es mi layout*/
+body {
+    background-color: $color-corporativo;
+    margin:0;
+}
+
+header {
+    height: 100px;
+    background-color: $verde;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    & h1 {
+        font-size: 40px;
+        font-family: sans-serif;
+        color: $color-k;
+       /* margin-top:100px;*/
+        margin-left: 60px;
+
+        & span {
+            color: rgb(37, 36, 36);
+        } 
+    }
+}
+
+$ancho-total: 1960px;
+$padding: 40px;
+
+.container {
+    width: $ancho-total;
+}
+
+article {
+    float: left;
+    width: 660px / $ancho-total * 100%; // porcentaje
+}
+
+aside {
+    float: right;
+    width: 300px / $ancho-total * 100%; // maths!!!
+}
+
+main {
+    @if ($ancho-total <= 1280px) {
+        padding: $padding;
+    } @else {
+        padding: $padding / 2;
+    }
+}
+//@extend extender las propiedades de un selector //a otro
+// Alertas varias
+.alerta {
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: sans-serif;
+    margin: 10px;
+    box-shadow: 1px 1px 5px black;
+    text-shadow: 1px 1px 1px white;
+}
+
+.exito {
+    @extend .alerta;
+    border: 1px solid greenyellow;
+    background-color: lightgreen;
+}
+
+.atencion {
+    @extend .alerta;
+    border: 1px solid yellowgreen;
+    background-color: yellow;
+}
+
+.error {
+   @extend .alerta;
+   border: 1px solid darkred;
+   background-color: $color-k; 
+   display:flex;
+   justify-content:start;
+   width: $widthCont;
+   height: 300px;
+}
+
+p:first-of-type {
+    @include margen(30px, 50px);
+}
+
+p:last-of-type {
+    @include margen(80px, 90px);
+}

@@ -1,0 +1,84 @@
+/*Este es mi layout*/
+body {
+  background-color: gray;
+  margin: 0; }
+
+header {
+  height: 100px;
+  background-color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  header h1 {
+    font-size: 40px;
+    font-family: sans-serif;
+    color: #d81bcb;
+    /* margin-top:100px;*/
+    margin-left: 60px; }
+    header h1 span {
+      color: #252424; }
+
+.container {
+  width: 1960px; }
+
+article {
+  float: left;
+  width: 33.67347%; }
+
+aside {
+  float: right;
+  width: 15.30612%; }
+
+main {
+  padding: 20px; }
+
+.alerta, .exito, .atencion, .error {
+  padding: 20px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: black;
+  font-family: sans-serif;
+  margin: 10px;
+  -webkit-box-shadow: 1px 1px 5px black;
+  box-shadow: 1px 1px 5px black;
+  text-shadow: 1px 1px 1px white; }
+
+.exito {
+  border: 1px solid greenyellow;
+  background-color: lightgreen; }
+
+.atencion {
+  border: 1px solid yellowgreen;
+  background-color: yellow; }
+
+.error {
+  border: 1px solid darkred;
+  background-color: #d81bcb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 200px;
+  height: 300px; }
+
+p:first-of-type {
+  margin: 30px 50px; }
+
+p:last-of-type {
+  margin: 80px 90px; }
